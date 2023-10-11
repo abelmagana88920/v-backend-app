@@ -1,5 +1,6 @@
 const fileupload = require("express-fileupload");
 const express = require("express");
+const PORT = process.env.PORT || 4000;
 
 const app = express();
 app.use(express.json());
@@ -44,6 +45,6 @@ ${buffer.toString('utf8')}
     }
 }
 
-app.listen(4000, () => {
+app.listen(PORT, () => {
     console.log(`Server started...`);
 });
